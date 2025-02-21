@@ -1,18 +1,18 @@
-nane: Rustfmt
- 
- on: [push, pull_request)
- 
- jobs:
-   Build:
+name: Rustfmt
+
+on: [push, pull_request]
+
+jobs:
+  build:
     runs-on: ubuntu-latest
 
-      steps:
-       - uses: actions/checkout@v1
-       - uses: actions-rs/toolchain@v1
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
-          profile: mininal
-          components: clippy, rustfat
-          override:true
-       - nane: Run rustfmt
-         run: make format
+          profile: minimal
+          components: clippy, rustfmt
+          override: true
+      - name: Run rustfmt
+        run: make format-check
