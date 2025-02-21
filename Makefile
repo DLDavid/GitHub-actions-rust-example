@@ -19,11 +19,14 @@ clean: ## Clean the project using cargo
 build: ## Build the project using cargo
 	cargo build
 
+test: ## Test the project using cargo
+	cargo test --quiet
+
 lint: ## Lint the project using cargo
 	@rustup component add clippy 2> /dev/null
-	cargo clippy
+	cargo clippy --quiet
 
-fmt: ## Format the project using cargo
+format: ## Format the project using cargo
 	@rustup component add rustfmt 2> /dev/null
 	cargo fmt
 
