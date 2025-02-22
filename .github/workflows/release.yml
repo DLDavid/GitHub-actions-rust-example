@@ -1,4 +1,4 @@
-name: Build binary release
+name: Build Binary Release
 
 on: [push, pull_request]
 
@@ -7,12 +7,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
           profile: minimal
           components: clippy, rustfmt
           override: true
-      - name: Run clippy
+      - name: Run build
         run: make build-release
