@@ -1,3 +1,5 @@
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=665539593)
+[![Build Binary Release](https://github.com/DLDavid/GitHub-actions-rust-example/actions/workflows/release.yml/badge.svg)](https://github.com/DLDavid/GitHub-actions-rust-example/actions/workflows/release.yml)
 
-# Rust template
+# Example of Rust CI pipeline
+
+Test our code with Github actions
